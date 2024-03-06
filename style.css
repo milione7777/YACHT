@@ -6,7 +6,9 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+  background-color: #11131f;
 }
+
 
 .header {
   position: sticky;
@@ -20,6 +22,10 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 0;
+  @media screen and (min-width:768px){
+    padding: 32px;
+    padding-bottom: 0;
+  }
 }
 
 .logo {
@@ -148,6 +154,16 @@ body {
   display: block;
 }
 
+.list-menu-nav {
+  display: flex;
+  list-style: none;
+  column-gap: 24px;
+  margin-left: auto;
+  @media screen and (max-width: 767px){
+    display: none;
+  }
+}
+
 .header-position {
   display: flex;
   align-items: center;
@@ -157,12 +173,14 @@ body {
 
 .list-menu + .list-menu {
   margin-top: 14px;
+  @media screen and (min-width: 768px){
+    margin: 0;
+  }
 }
 
 .list-menu-link {
   text-decoration: none;
   color: rgb(246, 245, 239);
-  font-family: DM Sans;
   font-size: 14px;
   font-weight: 700;
   line-height: 118%;
